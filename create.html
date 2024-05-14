@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Comic App - Create Page</title>
+    <link rel="stylesheet" type="text/css" href="./public/styles/styles.css">
+
+    <script src="https://kit.fontawesome.com/73a9073be0.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<!-- NAV SECTION -->
+    <div class="nav-section">
+        <nav class="nav-container">
+            <span class="nav-banner-container">
+            <a href="index.html"><img src="./public/images/CodeSquad-Comics-logo.png" alt="blue rectangular banner with the words 'CodeSquad Comics' written in teal on the right side and green and yellow books of different sizes on the left side" class="nav-banner-img"></a>
+            </span>
+            <div class="nav-menu-container">
+                <ul class="nav-menu-list nav-link-styling">
+                    <li class="nav-horizontal-menu"><a href="index.html">HOME</a></li>
+                    <li class="nav-horizontal-menu"><a href="about.html">ABOUT</a></li>
+                    <li class="nav-horizontal-menu"><a href="login.html">LOGIN</a></li>
+                </ul>
+            </div>
+            <div class="hamburger-menu">
+                <i class="fa-solid fa-bars" style="color: #ffffff;"></i>    
+            </div>
+        </nav>
+    </div>
+<!-- CONTENT SECTION -->
+    <div class="content-section">
+        <br>
+        <div class="text-container-1">
+            <span class="content-header">
+                <header>
+                    <h1>CREATE NEW COMIC</h1>
+                </header>
+            </span>
+            <div class="form-container">
+                <form action="#">
+                    <div class="form-fields">
+                        <div>
+                            <label for="title">Title:</label>
+                            <input type="title" name="title" id="title" placeholder="Title" />
+                        </div>
+                        <div>
+                            <label for="author">Author:</label>
+                            <input type="author" name="author" id="author" placeholder="Author" />
+                        </div>
+                        <div>
+                            <label for="publisher-select">Publisher:</label>
+                            <select name="publisher-select" id="publisher-select">
+                                <option value="select" selected disabled>Select</option>
+                                <option value="boom-box">BOOM! Box</option>
+                                <option value="dc-comics">DC Comics</option>
+                                <option value="harry-n-abrams">Harry N. Abrams</option>
+                                <option value="icon-books">Icon Books</option>
+                                <option value="image-comics">Image Comics</option>
+                                <option value="marvel">Marvel</option>
+                                <option value="simon-schuster">Simon & Schuster</option>
+                                <option value="top-shelf-productions">Top Shelf Productions</option>
+                                <option value="viz-media-llc">VIZ Media LLC</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="genre">Genre:</label>
+                            <input type="genre" name="genre" id="genre" placeholder="Genre" />
+                        </div>
+                        <div>
+                            <label for="number-pages">Number of pages:</label>
+                            <input type="number-pages" name="number-pages" id="number-pages" placeholder="Number of pages" />
+                        </div>
+                        <div>
+                            <label for="rating">Rating:</label>
+                            <input type="rating" name="rating" id="rating" placeholder="number (0-5)"/>
+                        </div>
+                        <div>
+                            <label class="synopsis-label">Synopsis:</label>
+                            <textarea class="synopsis-textarea" id="synopsis" name="synopsis" placeholder="Synopsis"></textarea>
+                        </div>  
+                        <br>             
+                        <div class="submit-button">
+                            <button class="yellow-button">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <br>
+    </div>
+<!-- FOOTER SECTION -->
+    <div class="footer-container">
+        <footer class="footer-text-styling footer-link-styling">
+            <div class="footer-menu">
+                <div class="visit-us">
+                    <h3>VISIT US</h3>
+                    <p>CodeSquad Comics<br>Dorchester Ave<br>Boston, MA 02124</p>
+                </div>
+                <div>
+                    <h3>LINKS</h3>
+                    <a href="index.html">Home</a><br>
+                    <a href="about.html">About</a><br>
+                    <a href="login.html">Login</a>
+                </div>
+                <div>
+                    <h3>FOLLOW US</h3>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3>A PRODUCT OF</h3>
+                    <a href="http://codesquad.org/" target="_blank" rel="noopener noreferrer"><img src="./public/images/CodeSquad-logo-b.png" alt="The Code Squad logo: a red opening angle bracket and a black closing angle bracket followed by the word 'CODE' in red upper case letters and the word 'SQUAD' written underneath in black upper case letters. Right below the suffix '.org' is written in red upper case letters" class="footer-codesquad-logo"></a>
+                </div>       
+            </div>
+        </footer>
+    </div>
+<!-- END OF FOOTER SECTION -->
+</body>
+</html>

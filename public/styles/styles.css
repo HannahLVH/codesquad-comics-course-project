@@ -1,0 +1,765 @@
+/* Branding
+
+The colors being used are:
+Teal: #006B6B
+Light Teal: #009E9E
+Yellow: #FCCF14
+Blue: #063C5E
+Grey: #C2C2C2
+White: #FFFFFF
+
+The size of the logos and images are:
+navbar: 300px width
+comic book cover on index: 200px width
+footer logo: 150px width (also, it's a different version of the image than in the last versions of the site)
+comic card cover: 400px width
+
+*/
+
+:root {
+    --teal: #006B6B;
+    --light-teal: #009E9E;
+    --yellow: #FCCF14;
+    --blue: #063C5E;
+    --grey: #C2C2C2;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: linear-gradient(var(--white),var(--light-teal), var(--teal));
+    font-size: 1.4rem;
+} 
+
+body h1, h2, h3 {
+    font-family: 'Fredericka the Great', sans-serif;
+}
+
+/* nav styling */
+
+.nav-section {
+    width: 100%;
+}
+
+.nav-container {
+    max-width: 100%;
+    min-width: 100%;
+    padding: 20px 10px 20px 10px;
+    background-color: var(--blue);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    font-family: 'Fredericka the Great', sans-serif;
+}
+
+.nav-banner-container {
+    /* box-sizing: border-box; */
+    width: 30%;
+    /* display: flex;
+    align-items: center; */
+    /* min-width: 50%;
+    max-width: 40%; */
+}
+
+.nav-banner-img {
+    /* width: 80%; */
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.nav-menu-container {
+    width: 50%;
+    margin-right: 5%;
+    /* display: flex; */
+    /* justify-content: space-evenly; */
+}
+
+.nav-menu-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+    align-items: center;
+}
+
+.nav-link-styling a:link {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.nav-link-styling a:visited {
+    color: var(--white);
+}
+
+.nav-link-styling a:hover {
+    color: var(--yellow);
+    font-weight: bold;
+}
+
+.nav-link-styling a:active {
+    background-color: var(--yellow);
+    color: var(--blue);
+    font-weight: bold;
+}
+
+
+/* content section styling */
+
+.content-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+.text-container-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 70%;
+    background-color: var(--white);
+    padding: 5%;
+    border: 8px solid var(--blue);
+}
+
+.text-container-1 h1, h2, p {
+    text-align: center;
+}
+
+.text-container-1 p {
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.text-container-1 h1, h2 {
+    color: var(--blue);
+}
+
+.content-header {
+    overflow-wrap: break-word;
+} 
+
+
+.collection-details-list {
+    display: flex;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* admin page styling */
+
+.admin-header { 
+    text-align: center;
+}
+
+.yellow-button {
+    color: var(--blue);
+    background-color: var(--yellow);
+    padding-top: 5px;
+    padding-bottom: 3px;
+}
+
+.blue-button {
+    color: var(--white);
+    background-color: var(--blue);
+    padding-top: 5px;
+    padding-bottom: 3px;
+}
+
+.comic-admin-table {
+    border: 3px solid var(--black);
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 0.5em;
+    border-collapse: collapse;
+    width: 80%;
+    font-family: 'Sans Open', sans-serif;
+}
+
+.comic-admin-table th {
+    border: 3px solid var(--black);
+    padding: 12px 8px;
+    font-weight: bold;
+}
+
+.comic-admin-table td {
+    border: 3px solid var(--black);
+    padding: 10px 8px;
+}
+
+.gray-bg {
+    background-color: var(--grey);
+}
+
+@media screen and (max-width: 769px) {
+
+    .table-container {
+        margin-bottom: 2em;
+    }
+
+    .table-wrapper {
+        max-width: auto;
+        display: flex;
+        overflow-x: auto;
+    }
+
+}
+
+/* form styling */
+
+.form-container {
+    width: 90%;
+    margin: 0.2em;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+    .form-container {
+        max-width: 100%;
+        margin: 0;
+        padding-left: 0.8em;
+        padding-right: 0.8em;
+    }
+
+} 
+
+.form-fields {
+    /* max-width: 100%; */
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.submit-button {
+    align-self: center;
+}
+
+.form-fields >div {
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+}
+        /* login form */
+
+.form-fields input[type=username],
+.form-fields input[type=password] {
+    box-sizing: border-box;
+    flex-grow: 2;
+    width: 50vw;
+    min-width: 1em;
+    max-width: 20em;
+    flex-basis: 100em; 
+    padding: 5px;
+    margin-right: 1.5em;
+}
+
+@media screen and (max-width: 768px) {
+    .form-fields input[type=username],
+    .form-fields input[type=password] {
+        margin-right: 3.5em;
+        flex-shrink: 2;
+
+    }
+}
+
+.form-fields label {
+    flex-grow: 2;
+    flex-basis: 100%;
+    text-align: right;
+    margin-right: 0.2em;
+    margin-left: 1em;
+}
+
+@media screen and (max-width: 768px) {
+    .form-fields label {
+        margin-left: 0.7em;
+        margin-right: 0;
+        padding-right: 0.1em;
+        
+    }
+    
+}
+
+        /* update & create form */
+.form-fields input[type="title"],
+.form-fields input[type="author"],
+.form-fields input[type="genre"],
+.form-fields input[type="genre"],
+.form-fields input[type="number-pages"],
+.form-fields input[type="rating"],
+.form-fields select {
+    box-sizing: border-box;
+    flex-grow: 2;
+    width: 50vw;
+    min-width: 1em;
+    max-width: 20em;
+    flex-basis: 100em;
+    padding: 5px;
+    margin-right: 1.5em;
+}
+
+@media screen and (max-width: 768px) {
+    .form-fields input[type="title"],
+    .form-fields input[type="author"],
+    .form-fields input[type="genre"],
+    .form-fields input[type="genre"],
+    .form-fields input[type="number-pages"],
+    .form-fields input[type="rating"], 
+    .form-fields select {
+        margin-right: 3.4em;
+        flex-shrink: 2;
+    }
+}
+
+.synopsis-textarea {
+    box-sizing: border-box;
+    flex-grow: 2;
+    width: 50vw;
+    min-width: 1em;
+    max-width: 20em;
+    min-height: 10em;
+    flex-basis: 100em;
+    margin-right: 1.5em;
+}
+
+@media screen and (max-width: 768px) {
+    .synopsis-textarea {
+        margin-right: 3.5em;
+        flex-shrink: 2;
+    }
+    
+}
+
+.synopsis-label {
+    position: relative;
+    bottom: 2.7em;
+}
+
+/* comic collection layout */
+
+.comic-collection-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.display-more-button {
+    text-align: center;
+}
+
+.comic-thumbnail {
+    width: 200px;
+    margin: 25px;
+}
+
+.comic-thumbnail-text {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.comic-thumbnail-text span {
+    font-style: italic;
+}
+
+.comic-link-styling a:link {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.comic-link-styling a:visited {
+    color: var(--blue);
+}
+
+.comic-link-styling a:hover {
+    color: var(--teal);
+    font-weight: bold;
+}
+
+.comic-link-styling a:active {
+    background-color: var(--yellow);
+    color: var(--blue);
+    font-weight: bold;
+} 
+
+/* comic card styling */
+
+    /* desktop view */
+@media screen and (min-width: 1024px) {
+    .comic-card {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 80%;
+        height: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        margin-bottom: 80px;
+        border: 8px solid var(--yellow);
+        border-radius: 40px;
+    }
+
+    .comic-card-top {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 40%;
+        background-color: var(--blue);
+        border-right: 8px solid var(--yellow);
+        border-radius: 30px 0px 0px 30px;
+    }
+    
+    .comic-title {
+        max-height: 5em;
+        text-align: center;
+        color: var(--yellow);
+    }
+    
+    .comic-cover-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2em;
+    }
+
+    .comic-cover-frame {
+        box-sizing: border-box;
+        width: 80%;
+        object-fit: cover;
+        border-radius: 30px;
+        border: 6px solid var(--white);
+    }
+
+    .comic-card-bottom {
+        box-sizing: border-box;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: var(--white);
+        border-radius: 0px 30px 30px 0px;
+    }
+
+    .comic-card-bottom-text {
+        height: 100%;
+    }
+
+    .comic-card-bottom p {
+        text-align: left;
+        font-family: 'Sans Open', sans-serif;
+        padding-left: 1em;
+        padding-right: 1em;
+       
+    }
+    
+    .comic-card-bottom b {
+        color: var(--blue);
+        text-decoration: underline;
+    }
+    
+    .card-bold-text {
+        color: var(--blue);
+        font-weight: bold;
+        text-decoration: underline;
+    }
+    
+    .card-italics-text {
+        font-style: italic;
+    } 
+    
+}
+
+    /* tablet & mobil view */
+@media screen and (max-width: 1023px) {
+
+    .comic-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+        align-self: center;
+        margin-left: 0.1em;
+        margin-right: 0.1em;
+        margin-top: 30px;
+        margin-bottom: 80px;
+        border: 8px solid var(--yellow);
+        border-radius: 40px;
+    }
+
+    .comic-card-top {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: auto;
+        background-color: var(--blue);
+        border-bottom: 8px solid var(--yellow);
+        border-radius: 30px 30px 0px 0px;
+    }
+
+    .comic-cover-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .comic-title {
+        text-align: center;
+        color: var(--yellow);
+    }
+
+    .comic-cover-frame {
+        max-width: 70%;
+        margin-bottom: 50px;
+        border-radius: 30px;
+        border: 6px solid var(--white);
+    }
+
+    .comic-card-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1em;
+        background-color: var(--white);
+        border-radius: 0px 0px 30px 30px;
+    }
+
+    .comic-card-bottom p {
+        text-align: left;
+        font-family: 'Sans Open', sans-serif;
+    }
+
+    .comic-card-bottom b {
+        color: var(--blue);
+        text-decoration: underline;
+    }
+
+    .card-bold-text {
+        color: var(--blue);
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    .card-italics-text {
+        font-style: italic;
+    }
+
+}
+
+/* footer styling */
+
+.footer-container {
+    width: 100%;
+    border-top: 5pt solid var(--yellow);
+    padding: 10px 10px 10px 10px;
+    background-color: var(--blue);
+    font-family: 'Fredericka the Great', sans-serif;
+    padding-bottom: 1em;
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.visit-us p {
+    text-align: left;
+    margin: 0;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-brands {
+    font-size: 2em;
+}
+
+
+
+.footer-text-styling h3 {
+    color: var(--yellow);
+}
+
+.footer-text-styling {
+    color: var(--white);
+}
+
+.footer-link-styling a:link { 
+    text-decoration: none;
+    color: var(--white);
+}
+
+.footer-link-styling a:visited {
+    color: var(--white);
+}
+
+.footer-link-styling a:hover {
+    font-weight: bold;
+    color: var(--yellow);
+}
+
+.footer-link-styling a:active {
+    background-color: var(--yellow);
+    color: var(--blue);
+    font-weight: bold;
+}
+
+
+/* MEDIA QUERIES */
+
+    /* nav styling queries  */
+
+    @media screen and (max-width: 1024px) {
+        .nav-section {
+            width: 100%;
+        }
+        
+    }
+
+    @media screen and (min-width: 769px) {
+
+        .nav-banner-container {
+            max-width: 100%; 
+        }
+    }
+    
+    @media screen and (max-width: 768px) {
+    
+        .nav-container {
+            min-width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    
+        .nav-banner-container {
+            min-width: 30%;
+            /* max-width: 180%; */
+        }
+    }
+
+    @media screen and (min-width:769px) {
+        .hamburger-menu {
+            display: none;
+        }  
+    }
+    
+    @media screen and (max-width: 768px) {
+        
+        .nav-menu-list {
+            display: none;
+        }
+    
+        .hamburger-menu {
+            margin-right: 10%;
+        }  
+        
+    }
+
+    /* content section queries */
+
+    @media screen and (max-width: 768px) {
+
+        .text-container-1 {
+            width: 80%;
+            margin-left: 0.2em;
+            margin-right: 0.1em;
+            padding: 0.4em;
+            align-self: center;
+        }
+        
+    }
+
+    /* footer media queries */
+
+    @media screen and (max-width: 767px) {
+
+        .footer-container {
+            max-width: 100%;
+            min-width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    
+        .footer-menu {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-left: 0.1em;
+            box-sizing: border-box;
+            max-width: 10em;
+        }
+    
+        .footer-menu >div {
+            margin-bottom: 2em;
+            /* max-width: 8em;
+            min-height: 7em; */
+        }
+    
+        .footer-socials {
+         width: 7.5em;
+        /* display: flex;
+        justify-content: center; */
+        }
+    
+        .footer-socials {
+            display: flex;
+            justify-content: space-between;
+            /* position: relative; */
+            /* right: 20px; */
+        }
+        
+        .fa-brands {
+            font-size: 2em;
+        }
+        
+    }
+
+    @media screen and (min-width: 769px) {
+
+        .footer-codesquad-logo {
+            width: 10em;
+        }
+    
+        .footer-codesquad-logo {
+            max-width: 90%;
+            min-width: 90%;
+        }
+    
+    }
+    
+    @media screen and (max-width: 768px) {
+        
+        .product-codesquad {
+            width: 100%;
+        }
+    
+        .footer-codesquad-logo {
+            max-width: 90%;
+            min-width: 90%;
+        }
+    
+    }
