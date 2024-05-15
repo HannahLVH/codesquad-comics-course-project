@@ -2,16 +2,15 @@
 const Book = require("../models/bookModel");
 
 const getAllBooks = async (req, res, next) => {
-    // try {
+    try {
     if (200) {
     await Book.find({}).then((books) =>  
     res.status(200).json({success: {message: "Success! Found all comics!"}, data: books, statusCode: 200}))
     }
-    /*
     } catch (error) {
         res.status(400).json({error: {message:"Error! Something went wrong getting all the books"}, data: comics, statusCode: 400});
     };
-    */
+
 };
 
 /* EXPERIMENTAL: Code to find book by ID without a line of code for each ID:
@@ -41,9 +40,11 @@ const getBook = async (req, res, next) => {
 const getBook = async (req, res, next) => {
     const {id} = req.params;
     // const foundBook = booksData.find(book => book.id === Number(id));
-    /*
     try { 
         if (200) {
+            await Book.findOne({_id: id}).then((books) => {
+            res.status(200).json({success: {message: "Success! Found the book you are looking for"}, data: books, statusCode: 200})})
+            /*
             let params = req.params;
             if (params.id === "1") {
             res.status(200).json({success: {message: "Success! Found the book you are looking for!"}, data: foundBook, statusCode: 200})
@@ -73,13 +74,11 @@ const getBook = async (req, res, next) => {
                 res.status(400).json({error: {message: "This books doesn't exist, try searching again", statusCode: 400}});
                 console.log("Book not found")
             }
+            }*/
         }
     } catch (error) {
         res.status(400).json({error: {message: "Error! Something went wrong retrieving a book!", statusCode: 400}})
-    }*/
-    await Book.findOne({_id: id}).then((books) => {
-        res.status(200).json({success: {message: "Success! Found the book you are looking for"}, data: books, statusCode: 200})
-    })
+    }
 };
 
 

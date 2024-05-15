@@ -16,6 +16,7 @@ passport.use(
                 }
                 bcrypt.compare(password, user.password, (error, result) => {
                     console.log(result == true);
+                    console.log("result", result)
                     if (error) {
                         return done(error);
                     }
@@ -24,6 +25,7 @@ passport.use(
             })
             .catch((error) => {
                 console.log(`${error}`);
+                console.log(`There was an error finding user from database: ${error}`)
             });
         }) 
     )
@@ -32,7 +34,7 @@ passport.use(
 passport.use(new GithubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
-    callbackURL: "http://localhost:3000/auth/github",
+    callbackURL: "https://codesquad-comics-course-project.onrender.com/auth/github",
     },
     (accessToken, refreshToken, profile, done) => {
         console.log(profile);
@@ -43,7 +45,8 @@ passport.use(new GithubStrategy({
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: "http://localhost:3000/auth/google"
+    callbackURL: "https://codesquad-comics-course-project.onrender.com/auth/google/",
+    scope: ["profile"]
     },
     (accessToken, refreshToken, profile, done) => {
     console.log(profile);
