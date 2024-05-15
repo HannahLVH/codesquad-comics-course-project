@@ -45,7 +45,7 @@ passport.use(new GithubStrategy({
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: "https://codesquad-comics-course-project.onrender.com/auth/google/",
+    callbackURL: "https://codesquad-comics-course-project.onrender.com/auth/google",
     scope: ["profile"]
     },
     (accessToken, refreshToken, profile, done) => {
