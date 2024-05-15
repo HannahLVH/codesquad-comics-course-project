@@ -34,7 +34,7 @@ passport.use(
 passport.use(new GithubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
-    callbackURL: "https://codesquad-comics-course-project.onrender.com/auth/github",
+    callbackURL: "http://localhost:3000/auth/github",
     },
     (accessToken, refreshToken, profile, done) => {
         console.log(profile);
