@@ -110,7 +110,7 @@ const editBook = async (req, res, next) => {
     const {title, author, publisher, genre, pages, rating, synopsis } = req.body;
 
     try {
-        await Book.findByIdAndUpdate(
+        const updatedBook = await Book.findByIdAndUpdate(
             id, 
             {$set: {
                 title,
@@ -123,7 +123,7 @@ const editBook = async (req, res, next) => {
             }},
             {new: true}
         )
-        res.status(201).json({success: {message: "Book is updated", data: newBook, statusCode: 201}})
+        res.status(201).json({success: {message: "Book is updated", data: updatedBook, statusCode: 201}})
         
     } catch (error) {
         res.status(400).json({error: {message: "Something went wrong while editing the book~", statusCode: 400}})

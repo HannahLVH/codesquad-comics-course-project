@@ -28,18 +28,19 @@ router.get("/api/books/delete/:id", (req, res, next) => {
 */
 
 router.get("/", getAllBooks);
-router.get("/:id", getBook);
+router.get("/get/:id", getBook);
 router.post("/create/new", createBook);
 router.put("/edit/:id", editBook);
+// router.get("/get/edit/:id", editBook);
 router.delete("/delete/:id", deleteBook);
 
 //For testing purposes:
 router.get("/create/new", (req, res, next) => {
     res.json("You're in the path to create a book")
 })
-router.get("/edit/:id", (req, res, next) => {
-    res.json("You're in the path to edit a book")
-})
+// router.get("/edit/:id", (req, res, next) => {
+//     res.json("You're in the path to edit a book")
+// })
 router.get("/delete/:id", (req, res, next) => {
     res.json("You're in the path to delete a book")
 })
