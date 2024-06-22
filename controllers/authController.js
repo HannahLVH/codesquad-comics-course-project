@@ -1,6 +1,7 @@
 const passport = require("passport");
 const bcrypt = require("bcrypt");
 // const { request } = require("express");
+const User = require("../models/userModel");
 
 const loginLocalFailed = (req, res, next) => {
     res.status(401).json({error: {message: "Username or password is incorrect"}, statusCode: 401,});

@@ -670,11 +670,41 @@ body h1, h2, h3 {
         
         .nav-menu-list {
             display: none;
+            
         }
     
         .hamburger-menu {
             margin-right: 10%;
+            position:sticky;
+            display: inline-block;
         }  
+
+        .hamburger-dropdown {
+            display: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #333; /* Adjust this to match your design */
+            list-style: none;
+            padding: 0;
+            margin-right: 0;
+            width: 200px; /* Adjust this to match your design */
+        }
+
+        .hamburger-dropdown li {
+            border-bottom: 1px solid #444; /* Adjust this to match your design */
+        }
+        
+        .hamburger-dropdown li a {
+            display: list-item;
+            padding: 10px;
+            color: #fff; /* Adjust this to match your design */
+            text-decoration: none;
+        }
+        
+        .hamburger-dropdown li a:hover {
+            background-color: #555; /* Adjust this to match your design */
+        }
         
     }
 

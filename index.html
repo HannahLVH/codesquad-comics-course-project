@@ -32,8 +32,28 @@
                 </ul>
             </div>
             <div class="hamburger-menu">
-                <i class="fa-solid fa-bars" style="color: #ffffff;"></i>  
+                <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+                <ul class="hamburger-dropdown">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                </ul>  
             </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const hamburgerIcon = document.querySelector('.hamburger-menu i');
+                    const dropdownMenu = document.querySelector('.hamburger-dropdown');
+
+                    hamburgerIcon.addEventListener('click', function () {
+                        if (dropdownMenu.style.display === "block") {
+                            dropdownMenu.style.display = "none";
+                        } else {
+                            dropdownMenu.style.display = "block";
+                        }
+                    });
+                });
+            </script>
+
         </nav>
     </div>
 <!-- CONTENT SECTION -->
